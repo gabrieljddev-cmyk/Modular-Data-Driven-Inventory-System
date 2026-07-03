@@ -1,0 +1,20 @@
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Readme.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Item_Data\Axe_Data.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Item_Data\Bow_Data.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Item_Data\Sword_Data.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Prefab\Inventory\InventoryManager.prefab
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Prefab\Inventory\Inventory_Container.prefab
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Prefab\Inventory\Inventory_Slot.prefab
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Scenes\SampleScene.unity
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Settings\DefaultVolumeProfile.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Settings\Mobile_Renderer.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Settings\Mobile_RPAsset.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Settings\PC_Renderer.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Settings\PC_RPAsset.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Settings\SampleSceneProfile.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\TextMesh Pro\Resources\TMP Settings.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF - Fallback.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset
+C:\Users\Gabriel\Desktop\JAM\InventorySystem(DataDriven)\Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset

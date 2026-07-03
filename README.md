@@ -33,13 +33,13 @@ A modular, optimized, and data-driven inventory system built from scratch in Uni
 
 ---
 
-## 💻 Technical Usage (Designer Workflow)**
+## 💻 Technical Usage (Designer Workflow)
 
-- The codebase is highly extensible. Creating a new item is entirely code-free:
-- In the Project window, right-click and select: Create -> Inventory -> New Item.
-- Configure the Unique ID, Name, Description, and Icon Sprite.
-- Toggle IsStackable and define the Max Stack limit.
-- Drag the newly created asset into any starting container or loot table.
+The codebase is engineered to be highly extensible, allowing game designers to manage data with a completely code-free workflow:
+1. In the **Project** window, right-click and select: `Create -> Inventory -> New Item`.
+2. Configure the **Unique ID**, **Name**, **Description**, and **Icon Sprite** in the Inspector.
+3. Toggle `IsStackable` and define the **Max Stack** limit if required.
+4. Drag the newly created asset into the designated **Item Database** slot within the system's Inspector.
 
 ---
 

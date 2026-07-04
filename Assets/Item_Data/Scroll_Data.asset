@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a194091e20fc6643a2389d009286e16, type: 3}
   m_Name: Scroll_Data
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  id: 3
+  id: 8
   itemName: Scrool
-  itemDescription: teste
+  itemDescription: 'Description lorem Description lorem Description lorem Description
+    lorem Description lorem '
   itemIcon: {fileID: 21300000, guid: db427fab3e94daf4caa704d9314a77a1, type: 3}
   itemValue: 0
   itemWeight: 0

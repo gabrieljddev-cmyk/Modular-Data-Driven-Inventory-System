@@ -12,7 +12,7 @@ public class InventoryDisplay : MonoBehaviour
 
     [Header("Drag Drop Settings")]
     [SerializeField] private Image dragIcon;
-    public int CurrentDragSlotIndex { get; private set; } = -1;
+    public int CurrentSlotIndex { get; private set; } = -1;
 
     private List<InventorySlotUI> inventoryUISlot = new List<InventorySlotUI>();
 
@@ -54,7 +54,7 @@ public class InventoryDisplay : MonoBehaviour
 
     public void StartDrag(int slotIndex, Vector2 mousePos)
     {
-        CurrentDragSlotIndex = slotIndex;
+        CurrentSlotIndex = slotIndex;
         
         var itemData = inventorySystem.GetItemAtSlot(slotIndex);
         if (itemData != null)
@@ -62,14 +62,12 @@ public class InventoryDisplay : MonoBehaviour
             dragIcon.sprite = itemData.itemIcon;
             dragIcon.gameObject.SetActive(true);
             dragIcon.transform.position = mousePos;
-
-            Debug.Log($"{itemData.name}, slot: {slotIndex}");
         }
     }
 
     public void UpdateDrag(Vector2 mousePos)
     {
-        if (CurrentDragSlotIndex == -1) return;
+        if (CurrentSlotIndex == -1) return;
         
         RectTransform rectTransform = dragIcon.GetComponent<RectTransform>();
         Canvas canvas = dragIcon.GetComponentInParent<Canvas>();
@@ -82,7 +80,7 @@ public class InventoryDisplay : MonoBehaviour
 
     public void EndDrag()
     {
-        CurrentDragSlotIndex = -1;
+        CurrentSlotIndex = -1;
         dragIcon.gameObject.SetActive(false);
     }
 
@@ -91,6 +89,23 @@ public class InventoryDisplay : MonoBehaviour
         if (fromIndex == toIndex) return;
         
         inventorySystem.SwapSlots(fromIndex, toIndex);
+    }
+
+    public void StartToolTip(int slotIndex, Vector2 mousePos)
+    {
+        CurrentSlotIndex = slotIndex;
+
+        var itemData = inventorySystem.GetItemAtSlot(slotIndex);
+
+        if (itemData != null)
+        {
+            ToolTipManager.ShowToolTip(itemData.itemName, itemData.itemDescription, mousePos);
+        }
+    }
+
+    public void EndToolTip()
+    {
+        ToolTipManager.HideToolTip();
     }
 
     private void InitializeInventoryUI()

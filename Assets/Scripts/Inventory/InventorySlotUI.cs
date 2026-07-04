@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Image itemIcon;
     [SerializeField] private TextMeshProUGUI textQuantity;
@@ -23,6 +23,8 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        displayManager.EndToolTip(); // avoiding conflicts with tooltip
+
         if (displayManager == null)
         {
             Debug.LogWarning("InventorySlotUI: displayManager is not assigned.");
@@ -56,10 +58,34 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (displayManager.CurrentDragSlotIndex != -1)
+        if (eventData.pointerDrag != null)
         {
-            displayManager.SwapSlots(displayManager.CurrentDragSlotIndex, this.SlotIndex);
+            InventorySlotUI draggedSlot = eventData.pointerDrag.GetComponent<InventorySlotUI>();
+            
+            if (draggedSlot != null)
+            {
+                // use real index, independing of displayManager to avoid bugs with and conflicts with tooltip
+                displayManager.SwapSlots(draggedSlot.SlotIndex, this.SlotIndex);
+                
+                Debug.Log($"Trocou com sucesso do slot {draggedSlot.SlotIndex} para o {this.SlotIndex}");
+            }
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (displayManager == null)
+        {
+            Debug.LogWarning("InventorySlotUI: displayManager not assigned.");
+            return;
+        }
+
+        displayManager.StartToolTip(SlotIndex, eventData.position);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        displayManager.EndToolTip();
     }
 
     public void EnsureReferences()

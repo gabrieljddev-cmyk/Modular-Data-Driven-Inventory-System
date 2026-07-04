@@ -18,6 +18,7 @@ A modular, optimized, and data-driven inventory system built from scratch in Uni
 - **Safety Position Snapback:** A fail-safe mechanism that automatically snaps an item back to its original slot if it is accidentally dropped outside a valid UI container.
 - **Robust State Persistence (Save/Load):** Automated serialization of the inventory's layout and data into a structured JSON format, safely written to disco via Application.persistentDataPath.
 - **Decoupled Event-Driven Communication:** Complete separation between backend data logic and the frontend presentation layer (UI) using C# Actions / UnityEvents, eliminating rigid dependencies and reducing the risk of null reference exceptions.
+- **ToolTip Mouse Hover:** An optimized, event-driven information panel. Using `Canvas Group` raycast pass-through to prevent any interference with the Drag & Drop system.
 
 ---
 
@@ -27,6 +28,7 @@ A modular, optimized, and data-driven inventory system built from scratch in Uni
 - **Language:** C#
 - **Architectural Patterns & Mechanics:**
   - **ScriptableObjects** acting as the item database.
+  - **Singleton Pattern:** Structured thread-safe-like manager instances for global UI states (e.g., ToolTipManager).
   - **DTO (Data Transfer Object)** pattern utilized to clean and prepare data models for lightweight disk serialization.
   - **Unity's JsonUtility** for fast and memory-efficient parsing.
   - **SOLID Principles** applied specifically to achieve high cohesion and low coupling between components.
